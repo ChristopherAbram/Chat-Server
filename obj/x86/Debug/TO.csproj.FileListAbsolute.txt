@@ -1,0 +1,10 @@
+G:\Studia\V\TO\Laboratoria\git1\TO\bin\Debug\ConsoleApplication.exe.config
+G:\Studia\V\TO\Laboratoria\git1\TO\obj\x86\Debug\TO.csprojResolveAssemblyReference.cache
+G:\Studia\V\TO\Laboratoria\git1\TO\bin\Debug\ConsoleApplication.exe
+G:\Studia\V\TO\Laboratoria\git1\TO\bin\Debug\ConsoleApplication.pdb
+G:\Studia\V\TO\Laboratoria\git1\TO\bin\Debug\EntityFramework.dll
+G:\Studia\V\TO\Laboratoria\git1\TO\bin\Debug\EntityFramework.SqlServer.dll
+G:\Studia\V\TO\Laboratoria\git1\TO\bin\Debug\EntityFramework.xml
+G:\Studia\V\TO\Laboratoria\git1\TO\bin\Debug\EntityFramework.SqlServer.xml
+G:\Studia\V\TO\Laboratoria\git1\TO\obj\x86\Debug\ConsoleApplication.exe
+G:\Studia\V\TO\Laboratoria\git1\TO\obj\x86\Debug\ConsoleApplication.pdb
