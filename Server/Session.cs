@@ -16,6 +16,30 @@ namespace Server
         public const int SESSION_ACTIVE = 1;
         public const int SESSION_NONE = 0;
 
+        public List<string> GetLoginUsernames
+        {
+            get
+            {
+                var usersList = new List<string>();
+
+                lock (__array)
+                {
+                    foreach (var item in __array)
+                    {
+                        if (item.Value.ContainsKey("username"))
+                        {
+                            usersList.Add(item.Value["username"]);
+                        }
+                    }
+                }
+
+                return usersList;
+            }
+
+            private set { }
+        }
+
+
         public static Session getInstance()
         {
             if(__instance == null)

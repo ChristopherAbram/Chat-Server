@@ -8,3 +8,13 @@ G:\Studia\V\TO\Laboratoria\git1\TO\bin\Debug\EntityFramework.xml
 G:\Studia\V\TO\Laboratoria\git1\TO\bin\Debug\EntityFramework.SqlServer.xml
 G:\Studia\V\TO\Laboratoria\git1\TO\obj\x86\Debug\ConsoleApplication.exe
 G:\Studia\V\TO\Laboratoria\git1\TO\obj\x86\Debug\ConsoleApplication.pdb
+D:\Users\student\Desktop\TO\bin\Debug\ConsoleApplication.exe.config
+D:\Users\student\Desktop\TO\obj\x86\Debug\ConsoleApplication.exe
+D:\Users\student\Desktop\TO\obj\x86\Debug\ConsoleApplication.pdb
+D:\Users\student\Desktop\TO\bin\Debug\ConsoleApplication.exe
+D:\Users\student\Desktop\TO\bin\Debug\ConsoleApplication.pdb
+D:\Users\student\Desktop\TO\bin\Debug\EntityFramework.dll
+D:\Users\student\Desktop\TO\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\student\Desktop\TO\bin\Debug\EntityFramework.xml
+D:\Users\student\Desktop\TO\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\student\Desktop\TO\obj\x86\Debug\TO.csprojResolveAssemblyReference.cache
