@@ -25,6 +25,7 @@ namespace Server
             user_message_response.header = "received";
             user_message_response.message.content = request.message.content;
 
+
             // ...
 
             return Command.OK;
