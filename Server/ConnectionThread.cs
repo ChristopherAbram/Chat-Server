@@ -24,14 +24,14 @@ namespace Server
 
         public void connectionHandling()
         {
-            Console.WriteLine("Tworzę wątek dla połączenia!");
+            //Console.WriteLine("Tworzę wątek dla połączenia!");
             NetworkStream stream = client.GetStream();
             int max = 65565;
             Byte[] bytes = new Byte[max];
             Byte[] respon = new Byte[max];
             int i;
 
-            RequestResolver resolver = new RequestResolver();
+            RequestResolver resolver = new RequestResolver(client);
 
             while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
             {
@@ -41,6 +41,9 @@ namespace Server
                     if (communicate.fromByteArray(bytes))
                     {
                         Communicate response = resolver.handle(communicate);
+
+                        // Inform server:
+                        Console.WriteLine(response.sessID + ": " + response.message != null ? response.message.content : "");
 
                         // Try to send response from server:
                         respon = response.toByteArray();

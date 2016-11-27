@@ -16,7 +16,6 @@ namespace Server
 
         override protected int _execute(Communicate request)
         {
-           
             using (var db = new UserContext())
             {
                 // Create and save a new User:

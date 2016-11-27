@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,8 +11,10 @@ namespace Server
     {
 
         protected ApplicationController _controller = null;
+        protected TcpClient _client = null;
 
-        public RequestResolver() {
+        public RequestResolver(TcpClient client) {
+            _client = client;
             _controller = new ApplicationController();
         }
 
@@ -30,6 +33,7 @@ namespace Server
 
                 // Get response:
                 Communicate response = command.Response;
+                response.sessID = communicate.sessID;
 
                 // Set sender and receiver:
                 //response.sender = ...
@@ -52,7 +56,18 @@ namespace Server
         protected void _init(Communicate c)
         {
             Session session = Session.getInstance();
-            c.sessID = session.Start(c.sessID);
+            ClientsInfo clients = ClientsInfo.getInstance();
+            
+            if (session.Status(c.sessID) == Session.SESSION_NONE)
+            {
+                c.sessID = session.Start(c.sessID);
+                clients.AddClient(c.sessID, _client);
+            }
+            else
+            {
+                c.sessID = session.Start(c.sessID);
+            } 
+
         }
 
     }

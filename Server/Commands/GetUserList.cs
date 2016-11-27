@@ -18,7 +18,6 @@
             _response.header = "userlist";
             _response.message = new Message() { content = msg };
             
-
             return Command.OK;
         }
     }

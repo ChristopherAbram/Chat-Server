@@ -109,32 +109,64 @@ namespace Server
            message = { "Correctly closed user session" }
             */
 
-        public String header = "";
+        public String header {
+            get { return _header; }
+            set { _header = value; }
+        }
 
-        public IPAddress receiver = null;   // IP address of receiver host,
-        public IPAddress sender = null;     // IP address of sender host
+        public IPAddress receiver {
+            get { return _receiver; }
+            set { _receiver = value; }
+        }   // IP address of receiver host,
+        public IPAddress sender {
+            get { return _sender; }
+            set { _sender = value; }
+        }     // IP address of sender host
 
-        public String sessID = "";
+        public String sessID
+        {
+            get { return _sessID; }
+            set { _sessID = value; }
+        }
 
-        public User user = null;
-        public Message message = null;
+        public User user
+        {
+            get { return _user; }
+            set { _user = value; }
+        }
+        public Message message
+        {
+            get { return _message; }
+            set { _message = value; }
+        }
+
+
+
+
+
+        private String _header = "";
+        private IPAddress _receiver = null;
+        private IPAddress _sender = null;
+        private String _sessID = "";
+        private User _user = null;
+        private Message _message = null;
 
         public Communicate()
         {
-            user = new User();
-            message = new Message();
+            _user = new User();
+            _message = new Message();
             //receiver = IPAddress.Parse("127.0.0.1");
             //sender = IPAddress.Parse("127.0.0.1");
         }
 
         public Communicate(Communicate ob)
         {
-            header = ob.header;
-            receiver = ob.receiver;
-            sender = ob.sender;
-            sessID = ob.sessID;
-            user = ob.user;
-            message = ob.message;
+            _header = ob.header;
+            _receiver = ob.receiver;
+            _sender = ob.sender;
+            _sessID = ob.sessID;
+            _user = ob.user;
+            _message = ob.message;
         }
 
     }

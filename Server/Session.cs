@@ -54,11 +54,12 @@ namespace Server
             if(Status(sessid) == SESSION_ACTIVE)
             {
                 // Session already run:
-
+                Console.WriteLine("Wznowienie sesji");
                 return sessid;
             }
             else
             {
+                Console.WriteLine("Tworzenie nowej sesji");
                 // Start new session:
                 string sid = generate_session_id();
 
@@ -75,14 +76,14 @@ namespace Server
             int status = SESSION_NONE;
             lock (__array)
             {
-                try
+            try
+            {
+                if (__array.ContainsKey(sessid))
                 {
-                    if (__array.ContainsKey(sessid))
-                    {
-                        status = SESSION_ACTIVE;
-                    }
+                    status = SESSION_ACTIVE;
                 }
-                catch (Exception e) { }
+            }
+            catch (Exception e) { }
             }
             return status;
         }
@@ -106,7 +107,7 @@ namespace Server
 
         public String get(string sessid, string index)
         {
-            string value = "";
+            string value = null;
             lock (__array)
             {
                 try
@@ -146,6 +147,43 @@ namespace Server
                 catch (Exception e) { }
             }
             return;
+        }
+
+        public string getByUsername(string username, string index)
+        {
+            string value = null;
+            foreach (var item in __array)
+            {
+                if (item.Value.ContainsKey("username"))
+                {
+                    if(item.Value["username"] == username)
+                    {
+                        if (item.Value.ContainsKey(index))
+                        {
+                            value = item.Value[index];
+                            return value;
+                        }
+                    }
+                }
+            }
+            return value;
+        }
+
+        public string getSessionIdByUsername(string username)
+        {
+            string value = null;
+            foreach (var item in __array)
+            {
+                if (item.Value.ContainsKey("username"))
+                {
+                    if (item.Value["username"] == username)
+                    {
+                        value = item.Key;
+                        return value;
+                    }
+                }
+            }
+            return value;
         }
 
         private String generate_session_id()

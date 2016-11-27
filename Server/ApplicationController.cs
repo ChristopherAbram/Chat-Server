@@ -52,13 +52,13 @@ namespace Server
             Session session = Session.getInstance();
             int status = session.Status(c.sessID);
 
-            if(status == Session.SESSION_ACTIVE)
-            {
+            //if(status == Session.SESSION_ACTIVE)
+            //{
                 if(session.get(c.sessID, "user") == "1")
                 {
                     return true;
                 }
-            }
+            //}
             return false;
         }
 

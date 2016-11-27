@@ -36,7 +36,8 @@ namespace Server
                 server = new TcpListener(local, port);
 
                 server.Start();
-                Console.Write("Oczekiwanie na nadchodzące połączenia...");
+                Console.WriteLine("Oczekiwanie na nadchodzące połączenia...");
+                Console.WriteLine("");
                 while (true)
                 {
                     ConnectionThread t = new ConnectionThread(server.AcceptTcpClient());
@@ -49,6 +50,10 @@ namespace Server
             catch (SocketException e)
             {
                 Console.WriteLine("Błąd gniazda: {0}", e);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Błąd", e);
             }
             finally
             {

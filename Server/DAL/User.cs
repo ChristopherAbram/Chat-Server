@@ -7,7 +7,7 @@ using Serialisation;
 
 namespace Server
 {
-    public class User : Entity
+    public class User : Serialisation.CustomSerialization, Entity
     {
         protected String _username = "";
 

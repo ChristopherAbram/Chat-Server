@@ -4,12 +4,13 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace TO
+namespace Server
 {
     public class ClientsInfo
     {
         private static ClientsInfo __instance = new ClientsInfo();
-        
+        protected Dictionary<string, TcpClient> clients = null;
+
         public static ClientsInfo getInstance()
         {
             if (__instance == null)
@@ -19,19 +20,30 @@ namespace TO
             return __instance;
         }
 
-        private ClientsInfo()
-        {}
-
-        private Dictionary<string, TcpClient> clients;
-
-        public void AddClient(string username, TcpClient client)
+        private ClientsInfo(){
+            clients = new Dictionary<string, TcpClient>();
+        }
+        
+        public void AddClient(string sid, TcpClient client)
         {
-            clients.Add(username, client);
+            if (clients != null)
+            {
+                clients.Add(sid, client);
+            }
         }
 
-        public TcpClient GetClients(string sessionId)
+        public TcpClient GetClient(string sid)
         {
+            try
+            {
+                if (clients != null && clients.ContainsKey(sid))
+                {
+                    return clients[sid];
+                }
+            }
+            catch (Exception e) { }
             //TODO: 
+            return null;
         }
     }
 }

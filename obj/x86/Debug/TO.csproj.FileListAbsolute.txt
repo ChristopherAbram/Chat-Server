@@ -18,3 +18,13 @@ D:\Users\student\Desktop\TO\bin\Debug\EntityFramework.SqlServer.dll
 D:\Users\student\Desktop\TO\bin\Debug\EntityFramework.xml
 D:\Users\student\Desktop\TO\bin\Debug\EntityFramework.SqlServer.xml
 D:\Users\student\Desktop\TO\obj\x86\Debug\TO.csprojResolveAssemblyReference.cache
+G:\Studia\V\TO\Laboratoria\TO\TO\bin\Debug\ConsoleApplication.exe.config
+G:\Studia\V\TO\Laboratoria\TO\TO\obj\x86\Debug\ConsoleApplication.exe
+G:\Studia\V\TO\Laboratoria\TO\TO\obj\x86\Debug\ConsoleApplication.pdb
+G:\Studia\V\TO\Laboratoria\TO\TO\obj\x86\Debug\TO.csprojResolveAssemblyReference.cache
+G:\Studia\V\TO\Laboratoria\TO\TO\bin\Debug\ConsoleApplication.exe
+G:\Studia\V\TO\Laboratoria\TO\TO\bin\Debug\ConsoleApplication.pdb
+G:\Studia\V\TO\Laboratoria\TO\TO\bin\Debug\EntityFramework.dll
+G:\Studia\V\TO\Laboratoria\TO\TO\bin\Debug\EntityFramework.SqlServer.dll
+G:\Studia\V\TO\Laboratoria\TO\TO\bin\Debug\EntityFramework.xml
+G:\Studia\V\TO\Laboratoria\TO\TO\bin\Debug\EntityFramework.SqlServer.xml

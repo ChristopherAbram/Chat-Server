@@ -7,7 +7,7 @@ using Serialisation;
 
 namespace Server
 {
-    public class Message :  Entity
+    public class Message : Serialisation.CustomSerialization, Entity
     {
         protected String _content = "";
 
